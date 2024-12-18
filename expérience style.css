@@ -1,0 +1,153 @@
+/* Style général pour le corps de la page */
+body {
+    background-color: #f7f0e1; /* Fond clair */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #5c2f1b; /* Texte en couleur brune */
+}
+
+/* Navigation */
+.navbar {
+    background-color: #e6ccb2; /* Couleur de fond de la navbar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #d7a98c;
+}
+
+.navbar-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a05638;
+}
+
+.navbar-item {
+    color: #a05638;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar-item:hover {
+    color: #5c2f1b;
+    transform: scale(1.1);
+}
+
+.navbar-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #a05638;
+    transition: width 0.3s ease-in-out;
+    margin: 5px auto 0;
+}
+
+.navbar-item:hover::after {
+    width: 100%;
+}
+
+.navbar-home {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.home-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.home-image:hover {
+    transform: scale(1.1);
+}
+
+/* Contenu spécifique à la page */
+.stage {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5c2f1b;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.def {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proged-s {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proged-s:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design pour les petits écrans */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+    }
+
+    .stage {
+        font-size: 20px;
+    }
+
+    .def {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .proged-s {
+        max-width: 100%;
+    }
+}

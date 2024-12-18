@@ -1,0 +1,156 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #e6ccb2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #d7a98c;
+}
+
+.navbar-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #8b572a;
+}
+
+.navbar-item {
+    color: #8b572a;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-item:hover {
+    color: #5c2f1b;
+    transform: scale(1.1);
+}
+
+.navbar-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #8b572a;
+    transition: width 0.3s ease-in-out;
+    margin: 5px auto 0;
+}
+
+.navbar-item:hover::after {
+    width: 100%;
+}
+
+.navbar-home {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.home-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.home-image:hover {
+    transform: scale(1.1);
+}
+
+/* Main content styles */
+main {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.mon-parcours {
+    color: #a56e64;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.phrase-container {
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */
+    margin: 20px 0;
+    position: relative;
+}
+
+.phrase {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 20px; /* Ajouter de l'espace entre le texte et l'image */
+}
+
+.diplome-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+    margin-left: 20px; /* Ajouter un petit espace à gauche de l'image */
+}
+
+@media (max-width: 768px) {
+    .phrase-container {
+        flex-direction: column; /* Empile les éléments verticalement sur petits écrans */
+        text-align: center;
+    }
+
+    .phrase {
+        margin-bottom: 10px; /* Espace entre le texte et l'image */
+    }
+
+    .diplome-image {
+        margin-left: 0;
+    }
+}
+/* Footer styles */
+footer {
+    background-color: #8b572a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}

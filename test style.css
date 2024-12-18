@@ -1,0 +1,162 @@
+.navbar {
+    background-color: #e6ccb2; /* Couleur de fond */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    position: sticky; /* Barre de navigation fixe */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre l'image et le texte */
+}
+
+.navbar-image {
+    width: 50px; /* Taille de l'image */
+    height: 50px;
+    border-radius: 50%; /* Image ronde */
+    border: 2px solid #d7a98c; /* Bordure subtile */
+}
+
+.navbar-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a05638; /* Couleur brun foncé */
+}
+
+.navbar-item {
+    color: #a05638; /* Couleur des liens */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar-item:hover {
+    color: #5c2f1b; /* Couleur accentuée au survol */
+    transform: scale(1.1); /* Zoom léger */
+}
+
+.navbar-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #a05638; /* Accent de soulignement */
+    transition: width 0.3s ease-in-out;
+    margin: 5px auto 0;
+}
+
+.navbar-item:hover::after {
+    width: 100%; /* Étendre l'effet de soulignement au survol */
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap; /* Réorganiser les éléments sur petits écrans */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar-item {
+        margin: 10px 0; /* Espacement entre les liens en vue mobile */
+    }
+
+    .navbar-logo {
+        margin-bottom: 15px;
+    }
+}
+.navbar-home {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.home-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    transition: transform 0.3s ease; 
+}
+
+.home-image:hover {
+    transform: scale(1.1); 
+}
+.app{
+    background: #e6ccb2;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+.app h1{
+    font-weight: 25px;
+    color:#f59797;
+    font-weight: 600;
+    border-bottom:1px solid #070505 ;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 22px;
+    color: #080101;
+    font-weight: 550;
+    margin-top:-10px;
+}
+.btn{
+    background: #fff;
+    color: rgb(231, 177, 208);
+    font-weight: 600;
+    width: 100%;
+    
+    border: 1.5px solid #222;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+}
+.btn:disabled{
+    cursor:no-drop ;
+}
+.s-btn{
+    background: #16110c;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    margin:20px auto 0 ;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.reponse-correcte{
+    background: #070505;
+}
+.reponse-incorrecte{
+    background:#f59797 ;
+}
